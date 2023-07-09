@@ -6,10 +6,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton, TextField } from '@mui/material';
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import SignIn from "../../signUP_signIn/SignIn";
-
-
-
 
 
 export default function Menu({setUserName}) {
@@ -61,9 +57,6 @@ export default function Menu({setUserName}) {
     }
 
 
-
-
-    //console.log(cookieValue);
     return (
         <div>
             <IconButton

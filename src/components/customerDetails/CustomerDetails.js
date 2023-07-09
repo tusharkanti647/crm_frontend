@@ -9,9 +9,8 @@ function CustomerDetails() {
     const [isLodar, setIsLodar] = useState(false);
     const navigate = useNavigate();
     const token = localStorage.getItem('token');
-    
     const { id } = useParams();
-    //let id = "64a8f4fb3b7db24b50beb3cb";
+
 
     //fetch the customer details
     //-------------------------------------------------------------------------
@@ -35,7 +34,7 @@ function CustomerDetails() {
         fetchFun();
     }, []);
 
-
+//loder show
     if (isLodar) {
         return (
             <Lodar />

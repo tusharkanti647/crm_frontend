@@ -31,24 +31,19 @@ function CustomerList({ setRefreshPage, refreshpage, customersData }) {
             },
         });
         if (response.status !== 200) {
-            //console.log("hello");
-            //dispatch(addToBasket({ ...product, qty: productQty }));
             setIsLodar(false);
             setSatingTostyfy({ ...satingTostyfy, message: "Please login first.", severity: "info" });
             setShowTostyfy(true);
             return;
         } else {
-            // let data = await response.json();
-            //setCustomersData(data);
-            // dispatch((isAddProductReducer(true)))
             setRefreshPage(!refreshpage);
             setIsLodar(false);
             setSatingTostyfy({ ...satingTostyfy, message: "Customer Delete successfully.", severity: "warning" });
             setShowTostyfy(true);
         }
-        //setIsLodar(false);
     }
 
+    //loder show
     if (isLodar) {
         return (
             <Lodar />

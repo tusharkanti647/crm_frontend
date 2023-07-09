@@ -17,7 +17,6 @@ function CustomerAddPage() {
         pinCode: "",
         information: ""
     });
-
     const token = localStorage.getItem("token");
     const navigate = useNavigate();
 
@@ -63,23 +62,26 @@ function CustomerAddPage() {
                 setIsLodar(false);
                 return;
             }
+            //for email validation check
             if (!mailValidation(email)) {
                 alert("email is invalid");
                 setIsLodar(false);
                 return;
             }
+            //for number validation check
             if (!numberValidation(number)) {
                 alert("phone number is invalid");
                 setIsLodar(false);
                 return;
             }
-            if (!pinCodeValidation(number)) {
+            //for pin validation check
+            if (!pinCodeValidation(pinCode)) {
                 alert("PIN number is invalid");
                 setIsLodar(false);
                 return;
             }
 
-            
+            //fetch funtion
             const response = await fetch("https://crm-api-pzus.onrender.com/customer-add", {
                 method: "POST",
                 headers: {
@@ -95,7 +97,7 @@ function CustomerAddPage() {
                 if (response.status === 422 || !customerData) {
                     alert("no data");
                 } else {
-                    alert("sucessfull add the new Customer Details");
+                    alert("successfully add the new Customer Details");
                     navigate("/");
                     setCustomerData({
                         ...customerData,
@@ -203,7 +205,7 @@ function CustomerAddPage() {
                         name="pinCode"
                         type="number"
                         id="outlined-required-pinCode"
-                        label="Pin Code"
+                        label="PIN Code"
                         value={customerData.pinCode}
                         onChange={handelInput}
                     />

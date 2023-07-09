@@ -1,7 +1,5 @@
 
 import "./SignIn.css"
-
-// import * as React from 'react';
 import Box from '@mui/material/Box';
 import { TextField } from '@mui/material';
 import { Link, useNavigate } from "react-router-dom";
@@ -44,12 +42,13 @@ export default function SignIn() {
             body: JSON.stringify({ email, password })
         });
         
-
         const data = await respons.json();
         if (respons.status === 400 || !signInData ) {
             alert("no data match ");
-        } else if (respons.status !== 200 ) {
+            setIsLodar(false);
+        } else if (respons.status !== 201) {
             alert("no data match that you are provided ");
+            setIsLodar(false);
         }else {
             alert("user sucessfull signin");
             localStorage.setItem("token", data.token);

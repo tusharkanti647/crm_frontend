@@ -1,15 +1,9 @@
 
 import { useState } from "react";
-
 import { Box, TextField } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
-
 import Lodar from "../lodar/Lodar";
 import { mailValidation, numberValidation, passwordValidation } from "../operation/operation";
-
-
-
-
 
 
 function SignUp() {
@@ -46,6 +40,7 @@ function SignUp() {
             setIsLodar(false);
             return;
         }
+        //check password validity
         if (!passwordValidation(password)) {
             alert("password between 8 to 15 characters. password contain at least one lowercase letter, uppercase letter, numeric digit, and special character");
             setIsLodar(false);
@@ -68,7 +63,7 @@ function SignUp() {
             return;
         }
 
-            //console.log("hello");
+            //fetch fun
             const respons = await fetch("https://crm-api-pzus.onrender.com/signup", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -78,7 +73,7 @@ function SignUp() {
             const data = await respons.json();
             if (respons.status === 422 || !signUpData) {
                 alert("no data matching");
-            }else if (respons.status !== 200 ) {
+            }else if (respons.status !== 201 ) {
                 alert("no data matching");
             }else {
                 alert("user successfully signup");

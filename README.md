@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# CRM
+# crm frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [Project hosted link](https://crmproject-1d3a7.web.app/) `https://crmproject-1d3a7.web.app/`
+## [Api hosted link](https://crm-api-pzus.onrender.com) `https://crm-api-pzus.onrender.com`
+## [backend github link](https://github.com/tusharkanti647/crm_backend) `https://github.com/tusharkanti647/crm_backend`
 
-## Available Scripts
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+1. Users can create accounts and log in using their email and password to access the platform.
+2. For the authorization and authentication used JWT in backend.
+3. it check the Indian PIN Code, Indian Mobile Number Validation and it validate the email in backend and frontend.
+4. To check a password between 8 to 15 characters which contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character.
+5. user can able to add new customers and edit customers if they login.
+6. Users should be able to search for specific customer by there name and apply sort based on name and last update time accroding.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. clone my repo.
+2. install all dependencies `npm install`
+3. to start the application `npm start`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. you can create a new user by signUp
 
-### `npm run build`
+5. or signIn using the
+ ### email address `tush@gmail.com`
+ ### Password `tush@123`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Usage
+1. If you are not logged in you can not access any page and doesn’t  add and edit customer. It shows signIn page.
+2.	For signing in you click on 3 line menu button in navbar right side, click on signin, 
+Ushing Email `tush@gmail.com` Password `tush@123` or you can create account on click “signUp” button.
+3.	You see the customer details click on home page any  profile photo or the customer name or customer email.
+4.	Home page you see all customer, in button you see previous and next button to navigate the page, can search the customer name, and sort the customer.
+5.	You can add customer click three dot menu, click add customer then you fill all data and submit button click.
+6. you can edit customer information to click on edit button in home page each customer row right side.
+7. you can delete customer information click on delete button in home page each customer row right side.
+8. you sign out from account click on three dot menu click signout.
+ ## if page is not load or give error pliease, reload the page 2-3 time because i am used free survices for my backend, some time when open 1st time my project it will give error or not loaded the page

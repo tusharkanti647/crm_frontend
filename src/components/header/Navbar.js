@@ -12,12 +12,6 @@ import { useState } from "react";
 
 function Navbar() {
     const [username, setUserName] = useState("");
-    const token = localStorage.getItem("token");
-    const navigate = useNavigate();
-
-
-
- 
 
     return (<div style={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <header >
@@ -33,9 +27,6 @@ function Navbar() {
                     <Menu setUserName={setUserName} />
                 </div>
             </nav>
-
-
-
         </header>
     </div>)
 }

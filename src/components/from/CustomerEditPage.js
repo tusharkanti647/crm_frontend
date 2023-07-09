@@ -13,7 +13,7 @@ function CustomerEditPage() {
 
     const { id } = useParams();
 
-    //fetch car detals
+    //fetch customer detals
     //-------------------------------------------------------------------------
     useEffect(() => {
         const fetchFun = async () => {
@@ -61,17 +61,20 @@ function CustomerEditPage() {
                 setIsLodar(false);
                 return;
             }
+            //for email validation check
             if (!mailValidation(email)) {
                 alert("email is invalid");
                 setIsLodar(false);
                 return;
             }
+            //for number validation check
             if (!numberValidation(number)) {
                 alert("phone number is invalid");
                 setIsLodar(false);
                 return;
             }
-            if (!pinCodeValidation(number)) {
+            //for pin validation check
+            if (!pinCodeValidation(pinCode)) {
                 alert("PIN number is invalid");
                 setIsLodar(false);
                 return;
@@ -93,7 +96,7 @@ function CustomerEditPage() {
                 if (response.status === 422 || !editCustomerData) {
                     alert("no data");
                 } else {
-                    alert("sucessfull edit the car Details");
+                    alert("successfully edit the customer Details");
 
                     //navigate to the home page
                     navigate("/");
@@ -205,7 +208,7 @@ function CustomerEditPage() {
                         name="pinCode"
                         type="number"
                         id="outlined-required-pinCode"
-                        label="MaxSpeed"
+                        label="PIN Code"
                         value={editCustomerData.pinCode}
                         onChange={handelInput}
                     />
